@@ -27,7 +27,6 @@ exec --no-startup-id NetworkManager
 #Start udiskie auto mount
 exec_always --no-startup-id exec udiskie -a
 
-
 exec megasync
 
 #-------Autostart with delay---------------
@@ -45,7 +44,7 @@ bindsym $mod+Print exec nougat
 # Font for window titles.
 font pango:monospace 8
 
-#----------------------Shortcuts/keybinds-----------------
+#----------------------Shortcuts----------------------
 
 #Start i3-dmenu-desktop
 
@@ -55,9 +54,10 @@ bindsym $mod+d exec i3-dmenu-desktop --dmenu='rofi -dmenu -sidebar -width 30 -pa
 bindsym $mod+Return exec urxvt 
 
 # Start i3lock-fancy
-bindsym $mod+l exec i3lock-fancy
+bindsym $mod+l exec i3lock-fancy && amixer -D pulse sset Master mute
 
 #-----------------------i3 windows commands------------------
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -103,7 +103,34 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent 
 bindsym $mod+Shift+a focus child
 
-# switch to workspace
+#-Gaps----------------------------
+
+#Win+G toggles gaps
+bindsym $mod+g gaps inner all set 15 
+bindsym $mod+Shift+g gaps inner all set 0
+
+#-Borders----------------------------
+for_window [class=".*"] border pixel 3 
+for_window [class="URxvt"] border pixel 3 
+for_window [class="MEGAsync"] floating enable
+for_window [class="Spotify"] move to workspace $workspace10
+
+#-Window assignment to workspace------
+assign [class="Thunar"] 5
+
+#-Workspaces-------------------
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+#switch to workspace
 bindsym $mod+Tab workspace next
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -162,12 +189,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#------------Fn's keybindings------------------
-#brightness up/down
+#-Fn's-keybindings------------------
+
+#brightness up
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+
+#brightness down
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
-#------------MEDIA---------
+#-MEDIA-Keys-Bindings--------------------------
 
 #mute/unmute sound
 bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
@@ -187,34 +217,4 @@ bindsym XF86AudioNext exec playerctl next
 
 #pause/play
 bindsym XF86AudioPlay exec playerctl play-pause
-
-
-#--------Workspaces--------
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
-set $workspace10 "10"
-
-#---------Borders--------------
-for_window [class=".*"] border pixel 3 
-for_window [class="URxvt"] border pixel 3 
-for_window [class="MEGAsync"] floating enable
-for_window [class="Spotify"] move to workspace $workspace10
-
-assign [class="Thunar"] 5
-
-
-
-#-----------Gaps--------------
-
-#Win+G toggles gaps
-bindsym $mod+g gaps inner all set 15 
-bindsym $mod+Shift+g gaps inner all set 0
-
 
