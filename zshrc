@@ -1,0 +1,1 @@
+/home/soares/.zshrc
