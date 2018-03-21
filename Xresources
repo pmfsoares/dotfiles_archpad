@@ -1,0 +1,105 @@
+!----------------Xft settings-------------------------
+
+Xft.dpi: 96 
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: full 
+Xft.hintstyle: hintslight
+!----------------URXVT-------------------------
+
+export TERM=rxvt
+URxvt*loginShell:true
+URxvt.scrollBar: false
+!urxvt.font: xft:SourceCodePro-medium:size=9
+urxvt.font: xft:DejaVuSansMono Nerd Font Mono:style=Regular:size=9
+URxvt.borderless: true 
+URxvt.transparent: true
+URxvt.shading: 15 
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+!----------------COLOURS---------------------------
+
+
+!*background:#222222
+!*foreground:#e8e9ca
+
+!*color0:    #222222
+!*color1:    #8b3e2f
+!*color2:    #526f33
+!*color3:    #665847
+!*color4:    #4a708b
+!*color5:    #7a378b
+!*color6:    #528b8b
+!*color7:    #999999
+
+!*color8:    #4c4c4c
+!*color9:    #d75f00
+!*color10:   #cee318
+!*color11:   #eee685
+!*color12:   #9ac0cd
+!*color13:   #9f79ee
+!*color14:   #79cdcd
+!*color15:   #e8e9ca
+
+
+!-------------Solarized-Dark-----------------------------
+
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
