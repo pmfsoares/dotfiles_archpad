@@ -32,9 +32,9 @@ exec megasync
 
 #------Screenshots---------------------
 
-bindsym Print exec nougat -f
+bindsym Print exec nougat -b imagemagick -f
 
-bindsym $mod+Print exec nougat 
+bindsym $mod+Print exec nougat -b imagemagick
 
 # Font for window titles.
 font pango:monospace 8
@@ -43,7 +43,6 @@ font pango:monospace 8
 
 #Start i3-dmenu-desktop
 
-
 bindsym $mod+d exec i3-dmenu-desktop --dmenu='rofi -dmenu -sidebar -width 30 -padding 12 -opacity "85" -eh 1 -lines 5 -padding 20 -hide-scrollbar -i'
 
 bindsym $mod+Shift+d exec 'rofi -sidebar -width 30 -padding 12 -opacity "85" -eh 1 -lines 5 -padding 20 -hide-scrollbar -i'
@@ -51,6 +50,7 @@ bindsym $mod+Shift+d exec 'rofi -sidebar -width 30 -padding 12 -opacity "85" -eh
 bindsym $mod+Return exec urxvt 
 
 # Start i3lock-fancy
+# https://github.com/pavanjadhaw/betterlockscreen
 bindsym $mod+l exec betterlockscreen -l blur && amixer -D pulse sset Master mute
 
 #-----------------------i3 windows commands------------------
@@ -111,7 +111,7 @@ for_window [class=".*"] border pixel 3
 for_window [class="URxvt"] border pixel 3 
 for_window [class="MEGAsync"] floating enable
 for_window [class="FTL.amd64"] floating enable
-
+for_window [class="Wine"] floating enable
 
 
 # https://github.com/ValveSoftware/steam-for-linux/issues/1040
@@ -229,4 +229,8 @@ bindsym XF86AudioNext exec playerctl next
 
 #pause/play
 bindsym XF86AudioPlay exec playerctl play-pause
+
+#launch button
+
+#bindsym XF86Launch1 exec "mpv ~/Projects/LaunchButton/musicfiles/$((1+RANDOM%7)).webm"
 
