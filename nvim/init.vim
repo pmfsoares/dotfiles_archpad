@@ -13,13 +13,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-"YouCompleteMe
-Plugin 'valloric/youcompleteme'
 Plugin 'scrooloose/nerdtree'
 Plugin 'donraphaco/neotex'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'shougo/deoplete.vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'neovim/node-host'
 " Turn on syntax highlighting
 syntax on
 
@@ -45,7 +45,7 @@ set ruler
 set encoding=utf-8
 
 " Whitespace
-set wrap
+"set wrap
 set textwidth=79
 set formatoptions=tcqrn1
 set tabstop=2
@@ -101,3 +101,11 @@ cmap w!! w !sudo tee > /dev/null %
 "Keybind to open NERDTree
 
 map <C-n> :NERDTreeToggle<CR>
+
+
+"Deoplete options
+set runtimepath+=~/.vim/bundle/deoplete.nvim/
+let g:deoplete#enable_at_startup = 1
+
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+

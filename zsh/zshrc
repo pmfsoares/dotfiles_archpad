@@ -52,9 +52,10 @@ alias aur="pacaur -S"
 #directory aliases
 
 alias conf='cd ~/.config'
-
+alias cmd='urxvt'
 #other random aliases
 
-#the hotsport is using this script https://github.com/oblique/create_ap 
-alias hotspot="echo -e \"Hotspot Name\nHotspotPWD\" | sudo ~/create_ap/create_ap wlp3s0 enp0s20u2u3 "
+alias hotspot="echo -e \"CIA Surveillance Truck  19\na123456789\" | sudo ~/create_ap/create_ap wlp3s0 enp0s20u2u3 "
 alias cprepo="sh ~/cat_configs.sh"
+
+alias lock="betterlockscreen -l blur; amixer -D pulse sset Master mute"
