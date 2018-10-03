@@ -47,15 +47,13 @@ alias syssuspend="systemctl suspend"
 alias paci="sudo pacman -S"
 alias pacu="sudo pacman -Syu"
 alias pacfind="sudo pacman -Ss"
-alias aur="pacaur -S"
+alias aur="yay --aur"
 
 #directory aliases
-
 alias conf='cd ~/.config'
-alias cmd='urxvt'
 #other random aliases
 
-alias hotspot="echo -e \"CIA Surveillance Truck  19\na123456789\" | sudo ~/create_ap/create_ap wlp3s0 enp0s20u2u3 "
-alias cprepo="sh ~/cat_configs.sh"
+alias hotspot="echo -e \"CIA Surveillance Truck #19\na123456789\" | sudo ~/create_ap/create_ap wlp3s0 enp0s20u2u3 "
+alias cprepo="sh ~/Projects/cat_configs.sh"
 
 alias lock="betterlockscreen -l blur; amixer -D pulse sset Master mute"

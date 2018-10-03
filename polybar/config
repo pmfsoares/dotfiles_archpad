@@ -81,9 +81,9 @@ label-separator = |
 label-separator-foreground = ${colors.foreground}
 
 menu-0-0= selection
-menu-0-0-exec = nougat -uc 
+menu-0-0-exec = nougat -uc -b imagemagick 
 menu-0-1 = full screen
-menu-0-1-exec = nougat -fuc
+menu-0-1-exec = nougat -fuc -b imagemagick
 
 
 [module/spotifytitle]

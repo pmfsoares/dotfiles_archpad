@@ -1,7 +1,6 @@
 #--------------Startup--Commands----------------
 
 #auto set background with feh
-#exec_always --no-startup-id feh --bg-scale ~/Wallpapers/praise_the_sun.jpg
 exec_always --no-startup-id "file=$(ls /home/soares/Wallpapers | shuf -n 1)" 
 exec_always --no-startup-id feh --bg-scale ~/Wallpapers/$file
 #X kb layout
@@ -238,4 +237,4 @@ bindsym XF86AudioPlay exec playerctl play-pause
 
 bindsym XF86Launch1 exec "mpv ~/Projects/LaunchButton/musicfiles/$((1+RANDOM%7)).webm"
 
-bindcode 108 exec "sh Projects/KbdLayout.sh"
+bindsym XF86Display exec "sh Projects/dotfiles_archpad/KbdLayout.sh"
