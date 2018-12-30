@@ -29,7 +29,6 @@ padding-left        = 2
 padding-right       = 2
 module-margin       = 2
 modules-left        = i3
-modules-center      = player-control
 modules-right       = cap wired-network wireless-network backlight ram volume temperature battery date
 scroll-up           = i3wm-wsnext
 scroll-down         = i3wm-wsprev
