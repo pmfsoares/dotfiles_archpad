@@ -50,9 +50,16 @@ alias pacfind="sudo pacman -Ss"
 
 #other random aliases
 alias ls="exa"
-alias demacs="emacsclient -nc -s instance"
+
+alias egrep="egrep --color"
+alias mega="cd ~/MEGAsync/EI/2ano/"
+alias demacs="emacsclient -nc -s"
 
 alias hotspot="echo -e \"CIA Surveillance Truck #19\na123456789\" | sudo ~/create_ap/create_ap wlp3s0 enp0s20u2u3 "
 alias cprepo="sh ~/Projects/cat_configs.sh"
 
-alias lock="betterlockscreen -l blur; amixer -D pulse sset Master mute"
+#alias lock="amixer -D pulse sset Master mute && /home/soares/Programs/glitchlock/glitchlock"
+
+alias 2on="xrandr --output LVDS1 --auto --output HDMI1 --right-of LVDS1 --auto"
+
+alias 2off="xrandr --output LVDS1 --auto --output HDMI1 --off"
