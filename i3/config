@@ -22,7 +22,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always xfce4-power-manager
 
 #Start udiskie auto mount
-exec_always --no-startup-id exec udiskie -a
+exec_always --no-startup-id exec udiskie -a --use-udisks2
 
 #Start MEGASync Client
 exec megasync
@@ -53,7 +53,7 @@ gaps outer 10
 
 bindsym $mod+d exec i3-dmenu-desktop --dmenu='rofi -dmenu -sidebar -width 30 -padding 12 -opacity "85" -eh 1 -lines 5 -padding 20 -hide-scrollbar -i'
 
-bindsym $mod+Shift exec 'rofi -sidebar -width 30 -padding 12 -opacity 85 -eh 1 -lines 5 -padding 20 -hide-scrollbar -i'
+bindsym $mod+Shift+d exec 'rofi -show window -width 30 -padding 12 -opacity 85 -eh 1 -lines 5 -padding 20 -hide-scrollbar -i'
 # start a terminal
 bindsym $mod+Return exec urxvt 
 
